@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -eu
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR/../lib/shared-functions.sh
+
+announce-started
+check-bosh
+ensure-fly
+deploy-concourse
+check-concourse
+
+announce-success

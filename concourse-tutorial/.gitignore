@@ -1,0 +1,7 @@
+.DS_Store
+.vagrant
+stub.yml
+credentials.yml
+tmp
+vendor/*
+site

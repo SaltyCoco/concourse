@@ -1,0 +1,9 @@
+---
+applications:
+- name: simple-go-web-app
+  disk: 256M
+  memory: 128M
+  random-route: true
+  buildpack: go_buildpack
+  env:
+    GOPACKAGENAME: simple-go-web-app

@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -eu
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../.." && pwd )"
+source $ROOT/ci/lib/shared-functions.sh
+
+export fly_target=${fly_target:-tutorial}
+
+announce-started
+# check-bosh
+ensure-fly
+check-concourse
+ensure-credentials-yml
+
+announce-task "Running all lessons"
+for f in $ROOT/tutorials/*/*/test.sh
+do
+  echo $f
+  set +eu
+  run-cmd pushd `dirname $f` || true
+  set -eu
+  run-cmd ./test.sh
+  set +eu
+  run-cmd popd
+  set -eu
+done
+
+announce-success

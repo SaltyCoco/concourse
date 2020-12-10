@@ -1,0 +1,38 @@
+---
+meta:
+  name: concourse-tutorial
+  team: cfcommunity
+  # fly -t pipes@main login -c https://pipes.starkandwayne.com -n main
+  target: pipes@cfcommunity
+  url: https://pipes.starkandwayne.com
+
+  cf:
+    api: ((cf-pws.api))
+    skip_cert_check: false
+    username: ((cf-pws.username))
+    password: ((cf-pws.password))
+    organization: ((cf-pws.organization))
+    space: concourse-tutorial
+
+  github:
+    owner: starkandwayne
+    repo: concourse-tutorial
+    private_key: ((github-private-key))
+    access_token: ((github-access-token))
+
+  concourse:
+    url: ((concourse.url))
+    username: ((concourse.username))
+    password: ((concourse.password))
+    ca_cert: ""
+
+  # credhub:
+  #   url: ((credhub_url))
+  #   username: credhub-cli
+  #   password: ((credhub_password))
+  #   ca_cert: ((credhub_ca_cert))
+
+  vault:
+    target: ((vault.target))
+    roleid: ((vault.role-id))
+    secretid: ((vault.secret-id))

@@ -1,0 +1,72 @@
+fly cli
+
+Usage:
+  fly [OPTIONS] <command>
+
+Application Options:
+  /t, /target:               Concourse target name
+  /v, /version               Print the version of Fly and exit
+      /verbose               Print API requests and responses
+      /print-table-headers   Print table headers even for redirected output
+
+Help Options:
+  /?                         Show this help message
+  /h, /help                  Show this help message
+
+Available commands:
+  abort-build               Abort a build (aliases: ab)
+  active-users              List the active users since a date or for the past 2 months (aliases: au)
+  archive-pipeline          Archive a pipeline (aliases: ap)
+  builds                    List builds data (aliases: bs)
+  check-resource            Check a resource (aliases: cr)
+  check-resource-type       Check a resource-type (aliases: crt)
+  checklist                 Print a Checkfile of the given pipeline (aliases: cl)
+  clear-task-cache          Clears cache from a task container (aliases: ctc)
+  completion                generate shell completion code
+  containers                Print the active containers (aliases: cs)
+  curl                      curl the api (aliases: c)
+  delete-target             Delete target (aliases: dtg)
+  destroy-pipeline          Destroy a pipeline (aliases: dp)
+  destroy-team              Destroy a team and delete all of its data (aliases: dt)
+  disable-resource-version  Disable a version of a resource (aliases: drv)
+  edit-target               Edit a target (aliases: etg)
+  enable-resource-version   Enable a version of a resource (aliases: erv)
+  execute                   Execute a one-off build using local bits (aliases: e)
+  expose-pipeline           Make a pipeline publicly viewable (aliases: ep)
+  format-pipeline           Format a pipeline config (aliases: fp)
+  get-pipeline              Get a pipeline's current configuration (aliases: gp)
+  get-team                  Show team configuration (aliases: gt)
+  help                      Print this help message
+  hide-pipeline             Hide a pipeline from the public (aliases: hp)
+  hijack                    Execute a command in a container (aliases: intercept, i)
+  jobs                      List the jobs in the pipelines (aliases: js)
+  land-worker               Land a worker (aliases: lw)
+  login                     Authenticate with the target (aliases: l)
+  logout                    Release authentication with the target (aliases: o)
+  order-pipelines           Orders pipelines (aliases: op)
+  pause-job                 Pause a job (aliases: pj)
+  pause-pipeline            Pause a pipeline (aliases: pp)
+  pin-resource              Pin a version to a resource (aliases: pr)
+  pipelines                 List the configured pipelines (aliases: ps)
+  prune-worker              Prune a stalled, landing, landed, or retiring worker (aliases: pw)
+  rename-pipeline           Rename a pipeline (aliases: rp)
+  rename-team               Rename a team (aliases: rt)
+  rerun-build               Rerun a build (aliases: rb)
+  resource-versions         List the versions of a resource (aliases: rvs)
+  resources                 List the resources in the pipeline (aliases: rs)
+  schedule-job              Request the scheduler to run for a job. Introduced as a recovery command for the v6.0 scheduler. (aliases: sj)
+  set-pipeline              Create or update a pipeline's configuration (aliases: sp)
+  set-team                  Create or modify a team to have the given credentials (aliases: st)
+  status                    Login status
+  sync                      Download and replace the current fly from the target (aliases: s)
+  targets                   List saved targets (aliases: ts)
+  teams                     List the configured teams (aliases: t)
+  trigger-job               Start a job in a pipeline (aliases: tj)
+  unpause-job               Unpause a job (aliases: uj)
+  unpause-pipeline          Un-pause a pipeline (aliases: up)
+  unpin-resource            Unpin a resource (aliases: ur)
+  userinfo                  User information
+  validate-pipeline         Validate a pipeline config (aliases: vp)
+  volumes                   List the active volumes (aliases: vs)
+  watch                     Stream a build's output (aliases: w)
+  workers                   List the registered workers (aliases: ws)
